@@ -3,55 +3,6 @@ const info = document.querySelector('.info');
 const instagram = document.querySelector('.instagram');
 const contactImages = document.querySelector('.contact');
 
-const tl = new TimelineMax();
-
-function toggleAnimation() {
-  width = $(window).width();
-
-  if (width >= 414) {
-    tl.fromTo(
-      projectImage,
-      2,
-      { width: '0%' },
-      { width: '75%', ease: Power2.easeInOut }
-    )
-      .fromTo(
-        info,
-        0.5,
-        { x: '-120%' },
-        { x: '0%', ease: Power2.easeInOut },
-        '-=1'
-      )
-      .fromTo(
-        instagram,
-        0.5,
-        { y: '-120%' },
-        { y: '0%', ease: Power2.easeInOut }
-      )
-      .fromTo(
-        contactImages,
-        0.5,
-        { x: '120%' },
-        { x: '0%', ease: Power2.easeInOut },
-        '-=1'
-      );
-  } else {
-    return '';
-  }
-}
-
-function james() {
-  $('.info').click(function (event) {
-    event.preventDefault();
-    $('.jamesModal').fadeIn(300).css('display', 'flex');
-  });
-  $('.close').click(function (event) {
-    event.preventDefault();
-    $('.jamesModal').fadeOut(300);
-    // .css('display', 'none');
-  });
-}
-
 function hideCrescendo() {
   $('.projectNameCrescendo').click(function (event) {
     var myDiv = document.getElementById('projectInfoCrescendo');
@@ -205,3 +156,52 @@ email();
 linkedin();
 github();
 toggleAnimation();
+
+// const tl = new TimelineMax();
+
+// function toggleAnimation() {
+//   width = $(window).width();
+
+//   if (width >= 414) {
+//     tl.fromTo(
+//       projectImage,
+//       2,
+//       { width: '0%' },
+//       { width: '75%', ease: Power2.easeInOut }
+//     )
+//       .fromTo(
+//         info,
+//         0.5,
+//         { x: '-120%' },
+//         { x: '0%', ease: Power2.easeInOut },
+//         '-=1'
+//       )
+//       .fromTo(
+//         instagram,
+//         0.5,
+//         { y: '-120%' },
+//         { y: '0%', ease: Power2.easeInOut }
+//       )
+//       .fromTo(
+//         contactImages,
+//         0.5,
+//         { x: '120%' },
+//         { x: '0%', ease: Power2.easeInOut },
+//         '-=1'
+//       );
+//   } else {
+//     return '';
+//   }
+// }
+
+// function james() {
+//   $('.info').click(function (event) {
+//     event.preventDefault();
+//     $('.jamesModal').fadeIn(300).css('display', 'flex');
+//   });
+//   $('.close').click(function (event) {
+//     event.preventDefault();
+//     $('.jamesModal').fadeOut(300);
+//     // .css('display', 'none');
+//   });
+// }
